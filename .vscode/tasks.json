@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Clean lockfile recovery backups",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/d",
+				"/c",
+				"rmdir /s /q node_modules.invalid-backup & rmdir /s /q node_modules.recovery-backup & del /q package-lock.recovery-backup.json"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
